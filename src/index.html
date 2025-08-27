@@ -9,51 +9,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+ <!-- Swiper CSS from CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
 </head>
+<!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
 <body class="bg-[rgb(48,44,66)] mx-10 h-auto">
 
-    <nav class="flex justify-between items-center relative mt-6 mb-1 " >
+    <!-- THE HEADER -->
+
+    <header>
+        <nav class="flex justify-between items-center relative mt-6 mb-1 " >
 
             <div class="flex gap-4 justify-center items-center">
-                <img class="h-25 w-25 relative" src="images/Frame.png " alt="">
-                <img  class="h-11.5 w-19 l" src="images/Group.png" alt="">
+                <img class="h-15 w-15 md:h-25 md:w-25 relative" src="images/Frame.png " alt="">
+                <img  class="w-15 h-7 md:h-11.5 md:w-19 l" src="images/Group.png" alt="">
             </div>
 
-            <section class="flex font-bold font-[Montserrat] text-white text-sm gap-4">
+            <section class="hidden lg:flex font-bold font-[Montserrat] text-white text-sm gap-4">
                 <a href="">ABOUT</a>
                 <a href="">SERVICES</a>
                  <a href="">TECHNOLOGIES</a>
                  <a href="HOW TO"></a>
             </section>
 
-            <section class="flex justify-center items-center gap-6">
-
+              <div class="flex justify-center items-center gap-6 ">
                 <a href="">
-                    <button class="border-2 text-white rounded-4xl text-sm m-0.5 w-38.5 h-12">CONTACT US</button>
+                    <button class="hidden md:block border-2 text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:min-[935px]:h-12 ">CONTACT US</button>
                 </a>
 
                 <a href="">
-                    <button class="border border-[#8176AF] text-white rounded-4xl text-sm m-0.5 w-38.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">JOIN HYDRA</button> 
+                    <button class="hidden md:block border border-[#8176AF] text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:min-[935px]:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] " >JOIN HYDRA</button> 
                 </a>
 
-            </section>            
-                
+               <img class="block lg:hidden" id="toggleBtn" src="images/Hamburger-Button.png" alt="">
+          </div>     
+            
     </nav>
 
+    <nav>
+
+            <div class="font-bold font-[Montserrat] text-white text-sm fixed  right-0 top-0  h-full w-[50%] bg-gray-800 p-[10%] z-20 lg:hidden" id="sidebar">
+                <div>
+                    <a href=""> <img class="absolute right-5 top-5 active:bg-[#C0B7E8] " id="closeBtn" src="images/close_35dp_8176AF_FILL0_wght400_GRAD0_opsz40.png" alt=""></a>
+                </div>
+                <div class="flex flex-col space-y-8 relative top-8 ">
+                    <a href="">ABOUT</a>
+                    <hr>
+                    <a href="">SERVICES</a>
+                    <hr>
+                    <a href="">TECHNOLOGIES</a>
+                    <hr>
+                    <a href="">CONTACT US</a>
+                    <hr>
+                    <a href="">JOIN HYDRA</a>
+                </div>
+                
+        </div>
+            
+    </nav>
+
+    </header>
+    
 <!-- THE FIRST SECTION OF THE HYDRA WEBSITE -->
 
-    <section>
-        <div class="flex justify-between h-[50%]">
+<section>
+        <div class="flex flex-col-reverse justify-center items-center min-[935px]:justify-between min-[935px]:flex-row ">
 
-  <div class="font-monserrat text-left text-white text-wrap w-111.5 space-y-8 mt-12 ">
+  <div class="w-full font-monserrat text-left text-white text-wrap min-[935px]:w-111.5 space-y-8 mt-12 ">
 
            <div class=" relative">
-                <h2 class="font-bold text-4xl " ><span class="text-[#8176AF]">Dive</span> into The Depths of <span class="text-[#8176AF]">Virtual Reality</span></h2>
+                <h2 class="font-bold text-[23px] min-[935px]:text-4xl max-[935px]:text-center" ><span class="text-[#8176AF]">Dive</span> into The Depths of <span class="text-[#8176AF]">Virtual Reality</span></h2>
+
+                <div class="relative">
+                     <img class="absolute  left-0 " src="images/Vector 4.png" alt=""> 
+                </div>
            </div>
 
                 
            <div class=" relative">
-                <p class="text-white/400 text-sm">
+                <p class="max-[935px]:text-center max-[935px]:text-pretty text-sm sm:text-[16px]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
                 </p>
 
@@ -61,9 +99,9 @@
            </div>
 
             
-            <div class="flex items-center">
-                <button class="w-53.5 h-12 border border-[#8176AF] rounded-4xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">BUILD YOUR WORLD</button>
-                <img src="images/arrow-small-right.png" alt="">
+            <div class="flex items-center max-[935px]:justify-center">
+                <button class="max-[935px]:w-[70%] min-[935px]:w-53.5 h-12 border border-[#8176AF] rounded-4xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">BUILD YOUR WORLD</button>
+                <img class="max-[935px]:hidden " src="images/arrow-small-right.png" alt="">
             </div>
 
         </div>
@@ -71,17 +109,14 @@
  
         <div class="">
             
- <!-- <img class="mt-6 w-122.5 h-106.5 box-border z-50 " src="images/Mask group.png" alt=""> -->
-   <div class="mt-6 w-118 h-100 border bg-[#211E2E] relative flex justify-center items-center rounded-[23%] rounded-bl-[55%] rounded-br-[26%]">
-    <img class="absolute size-full p-2" src="images/Mask group.png " alt="">
-  </div>
-      
-            
-      </div>
-            
-        </div>
 
-        <div class="relative">
+            <div>
+                <div class="mt-6 h-68 w-75 max-[325px]:w-60 max-[325px]:h-50 sm:w-110 sm:h-90 border bg-[#211E2E] relative flex justify-center items-center rounded-[23%] rounded-bl-[55%] rounded-br-[26%]">
+                <img class="absolute size-full p-2" src="images/Mask group.png " alt="">
+
+            </div>
+
+            <div class="relative size-auto max-sm:bottom-18 max-[325px]:bottom-40">
                 <img class="absolute -right-9 -bottom-45 -z-1 " src="images/Vector 3.png" alt="">
 
 
@@ -89,25 +124,32 @@
 
 
             <img class="absolute -bottom-70 -right-7 -z-1" src="images/Vector 2.png" alt="">
-
-             <img class="absolute  -bottom-40 -left-7" src="images/Vector 4.png" alt=""> 
        
       </div> 
+            </div>
+   
+      
+            
+      </div>
+            
+        </div>
+
+        
       
     </section> 
              
-
-   <section class="relative top-20">
+<!-- CONTACT US -->
+   <section class="relative top-20 hidden min-[935px]:block">
     
-     <div class="w-full h-41.5 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] to-100% flex justify-between items-center px-5">
+     <div class="w-full h-41.5 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] to-100% flex justify-between items-center px-5 max-[935px]:justify-center">
 
-        <div class="flex items-center">
+        <div class="flex items-center max-[935px]:hidden">
             <span>
-                <img class="w-17.5 h-17.5" src="images/Location-Icon.png" alt="">
+                <img class="w-10 h-10 min-[935px]:w-17.5 min-[935px]:h-17.5" src="images/Location-Icon.png" alt="">
             </span>
 
-            <span class="text-white" >
-                <h3 class="font-Montserrat font-bold text-2xl shrink-0 ">Pay Us a Visit</h3>
+            <span class="text-white text-sm [935px]:text-2xl" >
+                <h3 class="font-Montserrat font-bold shrink-0 ">Pay Us a Visit</h3>
                 <p>Union St, Seattle, WA 98101,United States</p>
             </span>
 
@@ -119,11 +161,11 @@
 
         <div  class="flex items-center">
             <span>
-                <img class="h-15 w-15" src="images/phone-call.svg" alt="">
+                <img class="w-10 h-10 min-[935px]:w-15 min-[935px]:h-15" src="images/phone-call.svg" alt="">
             </span>
 
-            <span class="text-white">
-                <h3 class="font-Montserrat font-bold text-2xl shrink-0 ">Give Us a call</h3>
+            <span class="text-white text-sm [935px]:text-2xl">
+                <h3 class="font-Montserrat font-bold min- shrink-0 ">Give Us a call</h3>
                 <p>Union St, Seattle, WA 98101,United States</p>
             </span>
             
@@ -135,11 +177,11 @@
 
         <div class="flex items-center">
             <span>
-                <img class="h-16 w-16 " src="images/mail.png" alt="">
+                <img class="w-11 h-11 min-[935px]:w-16 min-[935px]:h-16 " src="images/mail.png" alt="">
             </span>
 
-            <span class="text-white">
-                <h3 class="font-Montserrat font-bold text-2xl shrink-0 ">Send Us a Message</h3>
+            <span class="text-white text-sm [935px]:text-2xl">
+                <h3 class="font-Montserrat font-bold  shrink-0 ">Send Us a Message</h3>
                 <p>Contact@HydravTech.com</p>
             </span>
             
@@ -147,22 +189,87 @@
     </div>
 
    </section>
+   
+<!-- MOBILE SWIPE FO THE CONTACT SECTION -->
+      <section class="swiper relative top-15 block min-[935px]:!hidden">
+    
+     <div class="swiper-wrapper flex items-center justify-center">
+
+        <div class="swiper-slide w-full p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center">
+            <div class="flex gap-4 justify-center items-center">
+                <div>
+                <img class="w-10 h-10" src="images/Location-Icon.png" alt="">
+            </div>
+
+            <div class="text-white text-sm " >
+                <h3 class="font-Montserrat font-bold ">Pay Us a Visit</h3>
+                <p>Union St, Seattle, WA 98101,United States</p>
+            </div>
+            </div>
+
+        </div>
+
+        <div  class="swiper-slide w-full p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center">
+            <div class="flex gap-4 justify-center items-center">
+              <div>
+                <img class="w-10 h-10 " src="images/phone-call.svg" alt="">
+            </div>
+
+            <div class="text-white text-sm ">
+                <h3 class="font-Montserrat font-bold min- shrink-0 ">Give Us a call</h3>
+                <p>Union St, Seattle, WA 98101,United States</p>
+            </div>  
+            </div>      
+            
+        </div>
+
+        <div class="swiper-slide w-full p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center">
+            <div  class="flex gap-4 justify-center items-center">
+            <div>
+                <img class="w-11 h-11" src="images/mail.png" alt="">
+            </div>
+
+            <div class="text-white text-sm [935px]:text-2xl">
+                <h3 class="font-Montserrat font-bold  shrink-0 ">Send Us a Message</h3>
+                <p>Contact@HydravTech.com</p>
+            </div>
+            </div>
+           
+        </div> 
+        
+    </div>
+
+     <!-- Navigation buttons -->
+     <div class="max-[500px]:hidden">
+        <div class="swiper-button-prev  !text-gray-400 !rounded-full !border-2 !flex !p-6 !items-center !justify-cente !text-lg shadow !font-extralight "></div>
+        <div class=" !text-gray-400 !rounded-full !border-2 !flex !p-6 !items-center !justify-cente !text-lg shadow !font-extralight  swiper-button-next">
+        </div>
+    
+     </div>
+            
+
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+
+   </section>
 
 
+ 
+   <!-- INTRODUCTION TO HYDRA -->
     <section>
 
-        <div class="flex justify-between relative top-35 gap-6">
+        <div class="flex justify-between relative top-35 gap-6 max-[859px]:flex-col max-[859px]:justify-center max-[859px]:items-center">
 
         
-    <div class="font-Montserrat text-white font-bold flex flex-col space-y-23 w-[50%]">
+    <div class="font-Montserrat text-white font-bold flex flex-col space-y-23 max-[859px]:space-y-8 w-[50%] max-[859px]:w-full max-[859px]:items-center">
 
         <div class=" flex items-center">
 
-            <div>
+            <div class="max-[859px]:text-center">
                 <h1 class="text-wrap text-2xl">INTRODUCTION <span class="font-light">TO HYDRA VR</span></h1>
             </div>
             
-            <div class="">
+            <div class="max-[859px]:hidden">
                 <img class="w-55" src="images/Component 1.png" alt=""></div>
         </div>        
 
@@ -176,18 +283,18 @@
 
 
 
-    <div class="font-monstserrat w-[70%] h-fit">
+    <div class="font-monstserrat min-[935px]:w-[70%] max-[859px]:flex max-[859px]:flex-col max-[859px]:items-center">
 
-        <div><p class="text-white text text-wrap text-sm">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
+        <div><p class="text-white text text-wrap text-sm max-[859px]:hidden">Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
         </div>
 
-       <div class="relative top-20">
+       <div class="relative min-[859px]:top-20 ">
 
-         <div class="">
+         <div class="max-[859px]:hidden">
             <h1 class="text-2xl font-bold text-wrap text-white ">ABOUT <br> <span class="font-light">HYDRA VR</span></h1>
         </div>
 
-        <div class="relative top-6">
+        <div class="relative top-6 ">
             <p class="text-white text text-wrap text-sm">
                 Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudin tempor.
             </p>
@@ -197,8 +304,8 @@
 
        </div>
 
-        <div class="relative top-35">
-            <button class="w-53.5 h-12 border border-[#8176AF rounded-4xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">LET GET IN TOUCH</button>
+        <div class="relative top-15 min-[859px]:top-35">
+            <button class="w-53.5 h-10 md:h-12 border border-[#8176AF rounded-4xl bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">LET GET IN TOUCH</button>
         </div>
 
         <div></div>
@@ -207,26 +314,22 @@
     </div>
 
      </div>
-   
-        
-  
-
 
    </section>
 
-   
-   <section class="relative top-50">
-    <div class="flex font- montserrat justify-between text-white">
+  <!-- WHY BUILD WITH HYDRA -->
+   <section class="relative max-[859px]:top-62 top-50">
+    <div class="flex font- montserrat justify-between text-white max-[859px]:justify-center">
         <div class="flex w-[50%]">
         <div class="text-wrap">
-            <h2 class="font-bold text-2xl">WHY BUILD <span class="font-light">WITH HYDRA?</span></h2>
+            <h2 class="font-bold text-2xl max-[859px]:text-center">WHY BUILD <span class="font-light">WITH HYDRA?</span></h2>
         </div>
         <div>
-            <img class="w-42" src="images/Component 1.png" alt="">
+            <img class="w-42 max-[935px]:hidden" src="images/Component 1.png" alt="">
         </div>
         </div>
 
-        <div class="w-[65%]">
+        <div class="w-[65%] max-[935px]:hidden">
             <p class="text-wrap text-sm">
                 Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
             </p>
@@ -236,9 +339,11 @@
     <div></div>
    </section>
    
+   <!-- OUR CARDS  SECTION  -->
    <section >
+<div class="flex justify-center">
 
-    <div class="font-montserrat text-white flex justify-between space-10 space-y-5 relative top-70 flex-wrap">
+        <div class="font-montserrat text-white relative top-70 grid sm:grid-cols-2 md:grid-cols-3 gap-15 lg:grid-cols-4">
         
         <div class="relative h-115 w-60 border  border-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4 bg-radial from-[#433D60] to-[#211E2E]">
         
@@ -264,7 +369,7 @@ libero justo laoreet sit amet vitae.</p>
 
 
  
-        <div class="relative h-115 w-60 border  border-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4 bg-radial from-[#433D60] to-[#211E2E]">
+        <div class="relative h-115 w-60 border  border-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4 bg-radial from-[#433D60] to-[#211E2E] max-sm:hidden">
         
      
         <div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
@@ -289,7 +394,7 @@ libero justo laoreet sit amet vitae.</p>
 
     
     
-        <div class="relative h-115 border  border-[#211E2E] w-60 bg-radial from-[#433D60] to-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4">
+        <div class="relative h-115 border  border-[#211E2E] w-60 bg-radial from-[#433D60] to-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4 max-sm:hidden">
         
      
         <div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
@@ -312,7 +417,7 @@ libero justo laoreet sit amet vitae.</p>
     
 
    
-        <div class="relative h-115 w-60 border border-[#211E2E] bg-radial from-[#433D60] to-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4 ">
+        <div class="relative h-115 w-60 border border-[#211E2E] bg-radial from-[#433D60] to-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4  max-sm:hidden">
         
      
         <div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
@@ -336,77 +441,84 @@ libero justo laoreet sit amet vitae.</p>
 
     </div>
 
+</div>
+
+
     <div class=" relative right-20 -z-1">
         <img class="absolute " src="images/Vector 4.png" alt="">
     </div>
-
  
          <img class="absolute right-0 -bottom-10 -z-1" src="images/Vector 1.png " alt="">
     
-    
-       
-    
-
    </section>
 
+<!-- TECHNOLOGY AND HARDWARE -->
    <section>
 
-    <div class="relative top-90">
-            <div class="flex flex-col justify-center items-center w-full">
+    <div class="relative top-90 flex flex-col items-center justify-center">
+            <div class="flex flex-col justify-center items-center w-full max-md:bottom-80">
         <div>
-            <img src="images/Mask group (7).png" alt="">
+            <img class="max-sm:h-50 w-full" src="images/Mask group (7).png" alt="">
         </div>
 
-        <div class="relative font-Montserrat text-white font-bold text-3xl bottom-44 right-50">
+       
+        
+         <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative bottom-13 ">
+            <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+            <img class="absolute"  src="images/chevron-small-down.png" alt="">
 
-            <div class="absolute">
-                <h1 class="w-120">
+             <div class="relative font-Montserrat text-white font-bold text-3xl bottom-44  right-50 max-md:text-[20px] max-sm:-left-40 max-[420px]:left-35 ">
+
+            <div class="absolute max-[1020px]:top-20 max-[769px]:left-14 max-[700px]:top-22 max-[350px]:left-20">
+                <p class="w-[220%] max-[420px]:text-sm">
                 TECHNOLOGIES & HARDWARE <br> <span class="font-light p-10"></span>
                 USED BY HYDRA VR.
-            </h1>
+
+            <p>
             </div>
             
         </div>
 
-        
-         <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative bottom-13 left-10">
-            <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
-            <img class="absolute"  src="images/chevron-small-down.png" alt="">
         </div>
          </div>
         
     </div>
 
-     <div  class="flex flex-wrap gap-y-0.5 w-full justify-between items-center relative bottom-20">
+    <div class="flex justify-center items-center">
+
+<div  class="grid md:grid-cols-2 lg:grid-cols-4 w-full relative bottom-20 top-5 gap-x-20">
         <div>
             <img src="images/Hydra-Tech1 1.png" alt="">
         </div>
-        <div>
+        <div class=" max-md:hidden">
             <img src="images/Hydra-Tech2 1.png" alt="">
         </div>
-        <div>
-            <img src="images/Hydra-Tech3 1.png" alt="">
+        <div class=" max-md:hidden">
+            <img  src="images/Hydra-Tech3 1.png" alt="">
         </div>
-        <div>
-            <img src="images/Hydra-Tech4 1.png" alt="">
+        <div class=" max-md:hidden">
+            <img  src="images/Hydra-Tech4 1.png" alt="">
         </div>
     </div>
+    </div>
+     
     </div>
  
    </section>
 
-   <section class="relative top-65">
-    <div class="flex font- montserrat justify-between text-white">
-        <div class="flex">
-        <div class="text-wrap w-[50]">
+   <!-- HOW WE BUILD WITH HYDRA -->
+ <section class="relative top-85 max-md:top-100  ">
+    <div class="flex font- montserrat min-[835px]:justify-between max-[835px]:justify-center  text-white  ">
+        <div>
+        <div class="text-wrap max-md:text-center max-[835px]:w-full ">
             <h2 class="font-bold text-2xl">HOW WE BUILD <span class="font-light">WITH HYDRA?</span></h2>
         </div>
-        <div>
+        <div class=" max-[835px]:hidden">
             <img src="images/Component 1.png" alt="">
         </div>
         </div>
 
-        <div class="w-[65%]">
+        <div class="min-[835px]:w-[65%] max-[835px]:hidden">
             <p class="text-wrap text-sm ">
                 Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
             </p>
@@ -416,10 +528,13 @@ libero justo laoreet sit amet vitae.</p>
     <div></div>
    </section>
 
+<!-- HOW WE BUILD HYDRA -->
 
-   <section class="relative top-85">
+   <section class="relative top-85 max-md:top-115 ">
     
-    <div class="flex flex-wrap justify-between w-full items-center relative">
+    <div class="flex justify-center items-center">
+
+            <div class="flex flex-wrap justify-between items-center relative max-md:grid md:w-full max-md:space-y-5  max-sm:grid-cols-1 max-md:grid-cols-2 max-md:gap-30">
 
     <div class=" bg-[#211E2E] w-40 h-40 rounded-full">
          <div class="flex flex-col justify-center items-center space-y-0">
@@ -446,7 +561,7 @@ libero justo laoreet sit amet vitae.</p>
         </div> 
     
 
-      <div class=" bg-[#211E2E] w-40 h-40 rounded-full">
+      <div class=" bg-[#211E2E] w-40 h-40 rounded-full max-sm:hidden">
          <div class="flex flex-col justify-center items-center space-y-0">
         <div class="relative top-5">
             <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
@@ -468,7 +583,7 @@ libero justo laoreet sit amet vitae.</p>
     </div>
     </div></div>
 
-      <div class=" bg-[#211E2E] w-40 h-40 rounded-full">
+      <div class=" bg-[#211E2E] w-40 h-40 rounded-full max-sm:hidden">
          <div class="flex flex-col justify-center items-center space-y-0">
         <div class="relative top-5">
             <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
@@ -491,7 +606,7 @@ libero justo laoreet sit amet vitae.</p>
     </div>
     </div>
 
-      <div class=" bg-[#211E2E] w-40 h-40 rounded-full">
+      <div class=" bg-[#211E2E] w-40 h-40 rounded-full max-sm:hidden">
          <div class="flex flex-col justify-center items-center space-y-0">
         <div class="relative top-5">
             <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
@@ -512,19 +627,24 @@ libero justo laoreet sit amet vitae.</p>
         </div>
     </div>
     </div>
+    </div> 
     </div>
+
     </div>
-    <div class=" -z-1 relative w-full bottom-45">
+
+
+    <div class=" -z-1 relative w-full bottom-45 max-md:hidden">
         <img src="images/Vector 15.png" alt="">
     </div>
    </section>
     
+     
+ <!-- CONTACT US SECTION -->
+<section class="relative top-100 max-md:top-150">
 
-<section class="relative top-100">
+    <div class="relative w-full  border border-[#211E2E] bg-radial from-[#433D60] to-[#211E2E] text-white font-montserrat rounded-[85px] md:h-213 h-200">
 
-    <div class="relative w-full  border border-[#211E2E] bg-radial from-[#433D60] to-[#211E2E] text-white font-montserrat rounded-[85px] h-213 ">
-
-      <div class="absolute w-full p-20 space-y-10">
+      <div class="absolute w-full p-5 md:p-20 space-y-10">
 
        <div class=" flex flex-col justify-center items-center space-y-5">
         <div>
@@ -543,24 +663,23 @@ libero justo laoreet sit amet vitae.</p>
 
        <div>
             <form class="space-y-9 flex flex-col" action="">
-                <div class="grid grid-cols-2 grid-rows-2 
-                w-full gap-8">
-                <input class="border border-white rounded-4xl h-14 outline-0 pl-5" type="text" placeholder="First Name">
-                <input class="border border-white rounded-4xl h-14 outline-0 pl-5" type="text" placeholder="Last Name">
-                <input class="border border-white rounded-4xl h-14 outline-0 pl-5" type="email" placeholder="Email">
-                <input class="border border-white rounded-4xl h-14 outline-0 pl-5" type="number" placeholder="Phone number">
+                <div class="grid grid-cols-2 grid-rows-2 gap-8 max-md:flex max-md:flex-col">
+                <input class="border border-white rounded-4xl h-9 md:h-14 outline-0 pl-5" type="text" placeholder="First Name">
+                <input class="border border-white rounded-4xl h-9 md:h-14 outline-0 pl-5" type="text" placeholder="Last Name">
+                <input class="border border-white rounded-4xl h-9 md:h-14 outline-0 pl-5" type="email" placeholder="Email">
+                <input class="border border-white rounded-4xl h-9 md:h-14 outline-0 pl-5" type="number" placeholder="Phone number">
                 </div>
 
                 <div>
-                    <input class="border border-white rounded-4xl h-14 outline-0 pl-5 w-full" type="text" placeholder="Subject">
+                    <input class="border border-white rounded-4xl h-9 md:h-14 outline-0 pl-5 w-full" type="text" placeholder="Subject">
                 </div>
 
                 <div>
-                    <textarea class="border border-white rounded-4xl h-45.5 outline-0 p-5 w-full" name="response" id="" cols="30" rows="10" placeholder="Tell Us Something"></textarea>
+                    <textarea class="border border-white rounded-4xl h-25 md:h-45.5 outline-0 p-5 w-full" name="response" id="" cols="30" rows="10" placeholder="Tell Us Something"></textarea>
                 </div>
 
                 <div class=" flex justify-center">
-                    <button class="border text-white rounded-4xl text-sm m-0.5 w-38.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF]">SEND TO HYDRA</button>
+                    <button class="border text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF]">SEND TO HYDRA</button>
                 </div>
 
             </form>
@@ -571,21 +690,22 @@ libero justo laoreet sit amet vitae.</p>
     
 </section>
 
+<!-- THE FOOTER  -->
 <footer>
 
-    <div class="text-white font-montserrat relative top-140 space-y-10"> 
+    <div class="text-white font-montserrat relative top-167 space-y-10  max-md:flex max-md:flex-col max-md:justify-center max-md:items-center"> 
         
-        <div class=" flex justify-between">
+        <div class=" flex justify-between max-md:flex-col max-md:justify-center max-md:items-center ">
 
          <div>
         <img class="size-35" src="images/Frame.png" alt="">
     </div>
 
     <div>
-        <img src="images/Vector 21.png" alt="">
+        <img class=" max-md:hidden" src="images/Vector 21.png" alt="">
     </div>
 
-    <div class="flex flex-col">
+    <div class="flex flex-col max-md:hidden">
         <a href="">ABOUT</a>
         <a href="">SERVICES</a>
         <a href="">TECHNOLOGIES</a>
@@ -595,11 +715,11 @@ libero justo laoreet sit amet vitae.</p>
     </div>
 
     <div>
-        <img src="images/Vector 21.png" alt="">
+        <img class=" max-md:hidden" src="images/Vector 21.png" alt="">
     </div>
 
-     <div class="flex flex-col">
-        <a href="">F.A.Q</a>
+     <div class="flex flex-col max-md:hidden">
+        <a href="">F.A.Q</a> 
         <a href="">SITEMAP</a>
         <a href="">CONDITIONS</a>
         <a href="">LICENCSES</a>
@@ -607,7 +727,7 @@ libero justo laoreet sit amet vitae.</p>
     </div>
 
       <div>
-        <img src="images/Vector 21.png" alt="">
+        <img class=" max-md:hidden" src="images/Vector 21.png" alt="">
     </div>
 
     <div class="space-y-8 font-montserrat">
@@ -622,7 +742,7 @@ libero justo laoreet sit amet vitae.</p>
             <img src="images/pinterest.png" alt="">
         </div>
 
-        <div><button class="border text-white rounded-4xl text-sm m-0.5 w-48.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF]">BUILDING YOUR WORLD</button></div>
+        <div><button class="border text-white rounded-4xl text-sm m-0.5 w-48.5 h-10 md:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF] max-md:w-full">BUILDING YOUR WORLD</button></div>
 
     </div>
     </div>
@@ -631,7 +751,7 @@ libero justo laoreet sit amet vitae.</p>
         <img src="images/Vector 17.png" alt="">
     </div>
 
-    <div class="text-center">
+    <div class="text-center max-md:text-wrap max-md:w-[50%]">
         <h1>2023 &copy HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED</h1>
     </div>
 
@@ -650,7 +770,12 @@ libero justo laoreet sit amet vitae.</p>
 
     
 
-</footer> 
+</footer>
+ 
+  <!-- Swiper JS from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
 
 </body>
 </html> 
