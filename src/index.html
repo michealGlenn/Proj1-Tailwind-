@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJ 1</title>
+    <meta name="description" content="A brief and compelling description of your website in under 160 characters.">
+    <meta name="author" content="Micheal Glenn">
+    <meta name="keywords" content="web development, HTML, CSS, JavaScript, SEO, website, what,frontend, how">
+    <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (social media) -->
+    <meta property="og:title" content="Hydra website">
+    <meta property="og:description" content="practicing frontend web development">
+    <meta property="og:image" content="https://thafd.bing.com/th/id/OIP.151Nx1aUflvIftLCjY4m4wHaEK?w=324&h=182&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hydra website">
+    <meta name="twitter:description" content="practicing frontend web development">
+    <meta name="twitter:image" content="https://thafd.bing.com/th/id/OIP.151Nx1aUflvIftLCjY4m4wHaEK?w=324&h=182&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/Frame.png" type="image/png">
+    <title>Hydraw website</title>
     <link rel="stylesheet" href="output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,18 +50,18 @@
             </div>
 
             <section class="hidden lg:flex font-bold font-[Montserrat] text-white text-sm gap-4">
-                <a href="">ABOUT</a>
-                <a href="">SERVICES</a>
-                 <a href="">TECHNOLOGIES</a>
-                 <a href="HOW TO"></a>
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                 <a href="#technologies">TECHNOLOGIES</a>
+                 <a href="index2.html">Feedback</a>
             </section>
 
               <div class="flex justify-center items-center gap-6 ">
-                <a href="">
+                <a href="#contact">
                     <button class="hidden md:block border-2 text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:min-[935px]:h-12 ">CONTACT US</button>
                 </a>
 
-                <a href="">
+                <a href="#join">
                     <button class="hidden md:block border border-[#8176AF] text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:min-[935px]:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] " >JOIN HYDRA</button> 
                 </a>
 
@@ -52,20 +72,22 @@
 
     <nav>
 
-            <div class="font-bold font-[Montserrat] text-white text-sm fixed  right-0 top-0  h-full w-[50%] bg-gray-800 p-[10%] z-20 lg:hidden" id="sidebar">
+            <div class="font-bold font-[Montserrat] text-white text-sm fixed  right-0 top-0  h-full w-[75%] bg-gray-800 p-[10%] z-20 lg:hidden transition" id="sidebar">
                 <div>
                     <a href=""> <img class="absolute right-5 top-5 active:bg-[#C0B7E8] " id="closeBtn" src="images/close_35dp_8176AF_FILL0_wght400_GRAD0_opsz40.png" alt=""></a>
                 </div>
-                <div class="flex flex-col space-y-8 relative top-8 ">
-                    <a href="">ABOUT</a>
-                    <hr>
-                    <a href="">SERVICES</a>
-                    <hr>
-                    <a href="">TECHNOLOGIES</a>
-                    <hr>
-                    <a href="">CONTACT US</a>
-                    <hr>
-                    <a href="">JOIN HYDRA</a>
+                <div class="flex flex-col space-y-8 relative top-8 transition">
+                    <a href="#about">ABOUT</a>
+            
+                    <a href="#services">SERVICES</a>
+               
+                    <a href="#technologies">TECHNOLOGIES</a>
+            
+                    <a href="#contact">CONTACT US</a>
+
+                    <a href="#join">JOIN HYDRA</a>
+
+                    <a href="index2.html">Feedback</a>
                 </div>
                 
         </div>
@@ -139,7 +161,7 @@
     </section> 
              
 <!-- CONTACT US -->
-   <section class="relative top-20 hidden min-[935px]:block">
+   <section class="relative top-20 hidden min-[935px]:block" id="contact">
     
      <div class="w-full h-41.5 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] to-100% flex justify-between items-center px-5 max-[935px]:justify-center">
 
@@ -191,11 +213,11 @@
    </section>
    
 <!-- MOBILE SWIPE FO THE CONTACT SECTION -->
-      <section class="swiper relative top-15 block min-[935px]:!hidden">
+      <section class="swiper-one swiper w-full relative top-15 min-[935px]:!hidden" !id="contact">
     
-     <div class="swiper-wrapper flex items-center justify-center">
+     <div class="swiper-wrapper">
 
-        <div class="swiper-slide w-full p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center">
+        <div class="swiper-slide p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center w-[75%]">
             <div class="flex gap-4 justify-center items-center">
                 <div>
                 <img class="w-10 h-10" src="images/Location-Icon.png" alt="">
@@ -209,7 +231,7 @@
 
         </div>
 
-        <div  class="swiper-slide w-full p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center">
+        <div  class="swiper-slide p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center w-[75%]">
             <div class="flex gap-4 justify-center items-center">
               <div>
                 <img class="w-10 h-10 " src="images/phone-call.svg" alt="">
@@ -223,7 +245,7 @@
             
         </div>
 
-        <div class="swiper-slide w-full p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center">
+        <div class="swiper-slide p-12 border-2 rounded-[90px] shadow-[#COB2E8]  bg-linear-to-r from-[#211E2E] from-0% via-[#3A3456] via-95% to-[#211E2E] flex justify-center items-center w-[75%]">
             <div  class="flex gap-4 justify-center items-center">
             <div>
                 <img class="w-11 h-11" src="images/mail.png" alt="">
@@ -240,20 +262,27 @@
     </div>
 
      <!-- Navigation buttons -->
-     <div class="max-[500px]:hidden">
-        <div class="swiper-button-prev  !text-gray-400 !rounded-full !border-2 !flex !p-6 !items-center !justify-cente !text-lg shadow !font-extralight "></div>
-        <div class=" !text-gray-400 !rounded-full !border-2 !flex !p-6 !items-center !justify-cente !text-lg shadow !font-extralight  swiper-button-next">
-        </div>
+ 
     
-     </div>
-            
+ <div class="flex items-center justify-between relative bottom-27 z-50">
 
+        <div class="border-2 border-white w-15 h-15 rounded-full relative">
+
+        <div class="my-prev swiper-button-prev !text-white"></div>
+                
+    </div>
+
+        <div class="border-2 border-white w-15 h-15 rounded-full relative">
+   
+        <div class="my-next swiper-button-next !text-white"></div>
+                
+    </div>
+ 
+    </div>
     <!-- Pagination dots -->
     <div class="swiper-pagination"></div>
 
    </section>
-
-
  
    <!-- INTRODUCTION TO HYDRA -->
     <section>
@@ -265,7 +294,7 @@
 
         <div class=" flex items-center">
 
-            <div class="max-[859px]:text-center">
+            <div class="max-[859px]:text-center" id="about">
                 <h1 class="text-wrap text-2xl">INTRODUCTION <span class="font-light">TO HYDRA VR</span></h1>
             </div>
             
@@ -322,7 +351,7 @@
     <div class="flex font- montserrat justify-between text-white max-[859px]:justify-center">
         <div class="flex w-[50%]">
         <div class="text-wrap">
-            <h2 class="font-bold text-2xl max-[859px]:text-center">WHY BUILD <span class="font-light">WITH HYDRA?</span></h2>
+            <h2 class="font-bold text-2xl max-[859px]:text-center" id="services">WHY BUILD <span class="font-light">WITH HYDRA?</span></h2>
         </div>
         <div>
             <img class="w-42 max-[935px]:hidden" src="images/Component 1.png" alt="">
@@ -341,9 +370,9 @@
    
    <!-- OUR CARDS  SECTION  -->
    <section >
-<div class="flex justify-center">
+<div>
 
-        <div class="font-montserrat text-white relative top-70 grid sm:grid-cols-2 md:grid-cols-3 gap-15 lg:grid-cols-4">
+        <div class="font-montserrat text-white relative top-70 max-[1089px]:hidden flex justify-between">
         
         <div class="relative h-115 w-60 border  border-[#211E2E] rounded-[40px] flex flex-col items-center space-y-4 bg-radial from-[#433D60] to-[#211E2E]">
         
@@ -444,7 +473,7 @@ libero justo laoreet sit amet vitae.</p>
 </div>
 
 
-    <div class=" relative right-20 -z-1">
+    <div class=" relative right-20 -z-1"  id="technologies">
         <img class="absolute " src="images/Vector 4.png" alt="">
     </div>
  
@@ -452,10 +481,136 @@ libero justo laoreet sit amet vitae.</p>
     
    </section>
 
+   <!-- MOBILE VIEW FOR CARDS -->
+     <div class="swiper-two swiper w-full
+      relative top-70 min-[1089px]:!hidden">
+    <div class="swiper-wrapper font-montserrat text-white">
+      <!-- Slides -->
+       <div class="swiper-slide border  border-[#211E2E] rounded-[40px]  bg-radial from-[#433D60] to-[#211E2E] flex justify-center items-center w-[75%]">
+        
+        <div class="flex flex-col items-center justify-center">
+<div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
+            <img class=" relative top-3 left-3.5 size-33" src="images/Mask group (2).png" alt="">
+        </div>
+        <div><h1 class="font-bold text-2xl text-center">SIMULATION</h1></div>
+
+        <div><img class="relative " src="images/Vector 10.png" alt=""></div>
+
+        <div >
+            <p class="text-sm  w-full font-light mx-5" >
+                Vitae sapien pellentesque habitant morbi
+nunc. Viverra aliquet  porttitor rhoncus 
+libero justo laoreet sit amet vitae.</p>
+        </div>
+
+        <div><button class=" border-0 text-white rounded-4xl text-sm m-0.5 w-38.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">TRY IT NOW</button></div>
+
+        </div>
+        
+   </div>
+    
+
+
+ 
+        <div class="swiper-slide border  border-[#211E2E] rounded-[40px] bg-radial from-[#433D60] to-[#211E2E] flex justify-center items-center w-[75%]">
+        <div class=" flex flex-col items-center justify-center">
+       <div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
+            <img class=" relative top-3 left-3.5 size-33" src="images/Mask group (3).png" alt="">
+        </div>
+        <div><h1 class="font-bold text-2xl text-center">EDUCATION</h1></div>
+
+        <div><img class="relative " src="images/Vector 10.png" alt=""></div>
+
+        <div >
+            <p class="text-sm  w-full font-light mx-5" >
+                Vitae sapien pellentesque habitant morbi
+nunc. Viverra aliquet  porttitor rhoncus 
+libero justo laoreet sit amet vitae.</p>
+        </div>
+
+        <div><button class=" border-0 text-white rounded-4xl text-sm m-0.5 w-38.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">TRY IT NOW</button></div>
+        </div> 
+   </div>
+ 
+
+
+    
+    
+        <div class="swiper-slide border  border-[#211E2E] rounded-[40px]  bg-radial from-[#433D60] to-[#211E2E] flex justify-center items-center w-[75%]">
+        
+            <div class="flex flex-col items-center justify-center">
+        <div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
+            <img class=" relative top-3 left-3.5 size-33" src="images/Mask group (4).png" alt="">
+        </div>
+        <div><h1 class="font-bold text-2xl text-center">SELF-CARE</h1></div>
+
+        <div><img class="relative " src="images/Vector 10.png" alt=""></div>
+
+        <div >
+            <p class="text-sm  w-full font-light mx-5" >
+             Vitae sapien pellentesque habitant morbi
+nunc. Viverra aliquet  porttitor rhoncus 
+libero justo laoreet sit amet vitae.</p>
+        </div>
+
+        <div><button class=" border-0 text-white rounded-4xl text-sm m-0.5 w-38.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">TRY IT NOW</button></div>
+            </div>
+     
+   </div>
+    
+
+   
+        <div class="swiper-slide border  border-[#211E2E] rounded-[40px]  bg-radial from-[#433D60] to-[#211E2E] flex justify-center items-center w-[75%]">
+            <div class="flex flex-col items-center justify-center">
+ <div class=" bg-[#211E2E] w-40 h-40 rounded-full m-5">
+            <img class=" relative top-3 left-3.5 size-33" src="images/Mask group (9).png" alt="">
+        </div>
+        <div><h1 class="font-bold text-2xl text-center">OUTDOOR</h1></div>
+
+        <div><img class="relative " src="images/Vector 10.png" alt=""></div>
+
+        <div>
+            <p class="text-sm  w-full font-light mx-5" >
+             Vitae sapien pellentesque habitant morbi
+nunc. Viverra aliquet  porttitor rhoncus 
+libero justo laoreet sit amet vitae.</p>
+        </div>
+
+        <div id="technologies"><button class=" border-0 text-white rounded-4xl text-sm m-0.5 w-38.5 h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]">TRY IT NOW</button></div>
+            </div>   
+
+   </div>
+    
+    </div>
+
+    <!-- Navigation buttons -->
+    
+ <div class="flex relative bottom-55 justify-between  z-50">
+
+        <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative">
+    <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+        <div class="my-prev swiper-button-prev !text-[#211E2E] font-bold"></div>
+                
+    </div>
+    </div>
+
+        <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative">
+    <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+        <div class="my-next swiper-button-next !text-[#211E2E] font-bold"></div>
+                
+    </div>
+    </div>
+ 
+    </div> 
+
+
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+
 <!-- TECHNOLOGY AND HARDWARE -->
    <section>
-
-    <div class="relative top-90 flex flex-col items-center justify-center">
+    <div class="relative top-90 flex flex-col items-center justify-center max-lg:!hidden">
             <div class="flex flex-col justify-center items-center w-full max-md:bottom-80">
         <div>
             <img class="max-sm:h-50 w-full" src="images/Mask group (7).png" alt="">
@@ -463,7 +618,7 @@ libero justo laoreet sit amet vitae.</p>
 
        
         
-         <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative bottom-13 ">
+         <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative bottom-13 " id="technologies">
             <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
             <img class="absolute"  src="images/chevron-small-down.png" alt="">
 
@@ -484,30 +639,110 @@ libero justo laoreet sit amet vitae.</p>
         
     </div>
 
-    <div class="flex justify-center items-center">
 
-<div  class="grid md:grid-cols-2 lg:grid-cols-4 w-full relative bottom-20 top-5 gap-x-20">
+<div  class="flex justify-between  w-full relative bottom-20 top-5 max-lg:!hidden">
         <div>
             <img src="images/Hydra-Tech1 1.png" alt="">
         </div>
-        <div class=" max-md:hidden">
+        <div>
             <img src="images/Hydra-Tech2 1.png" alt="">
         </div>
-        <div class=" max-md:hidden">
+        <div >
             <img  src="images/Hydra-Tech3 1.png" alt="">
         </div>
-        <div class=" max-md:hidden">
+        <div>
             <img  src="images/Hydra-Tech4 1.png" alt="">
         </div>
     </div>
+
     </div>
-     
+ 
+   </section>
+
+   <!-- TECHNOLOGY AND HARDWARE SECTION FOR MOBILE -->
+
+<section >
+   <div class="relative top-90  lg:!hidden" id="technologies">
+            <div class="flex flex-col justify-center items-center w-full max-md:bottom-80">
+        <div>
+            <img class="max-sm:h-50 w-full"  src="images/Mask group (7).png" alt="">
+        </div>
+
+       
+        
+         <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative bottom-13 ">
+            <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+            <img class="absolute"  src="images/chevron-small-down.png" alt="">
+
+             <div class="relative font-Montserrat text-white font-bold text-3xl bottom-44  right-50 max-md:text-[20px] max-sm:-left-40 max-[420px]:left-35 ">
+
+            <div class="absolute max-[1020px]:top-20 max-[769px]:left-14 max-[700px]:top-22 max-[350px]:left-20">
+                <p class="w-[220%] max-[420px]:text-sm">
+                TECHNOLOGIES & HARDWARE <br> <span class="font-light p-10">USED BY HYDRA VR.</span>
+            <p>
+            </div>
+            
+        </div>
+
+        </div>
+         </div>
+        
+    </div>
+
+    <!-- MOBILE SLIDE DISPLAY -->
+      <div class="swiper-three swiper w-full overflow-x-hidden relative top-10">
+
+<div  class="swiper-wrapper">
+        
+ <div class="swiper-slide flex justify-center items-center w-[70%]">
+    <img  class="mx-auto size-[230px]" src="images/Hydra-Tech1 1.png" alt="">
+ </div>
+
+ <div class="swiper-slide flex justify-center items-center w-[70%]">
+ <img  class="mx-auto size-[230px]" src="images/Hydra-Tech2 1.png" alt="">   
+ </div>
+
+  <div class="swiper-slide flex justify-center items-center w-[70%]">
+     <img  class="mx-auto size-[230px]"  src="images/Hydra-Tech3 1.png" alt="">
+ </div>
+
+  <div class="swiper-slide flex justify-center items-center w-[70%]">
+    <img class="mx-auto size-[230px]" src="images/Hydra-Tech4 1.png" alt="">
+ </div>
+             
+                       
+    </div>
+        <!-- Navigation buttons -->
+       <div class="flex relative bottom-43 justify-between  z-50">
+
+        <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative">
+    <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+        <div class="my-prev swiper-button-prev !text-[#211E2E] font-bold"></div>
+                
+    </div>
+    </div>
+
+        <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative">
+    <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+        <div class="my-next swiper-button-next !text-[#211E2E] font-bold"></div>
+                
+    </div>
+    </div>
+ 
+    </div> 
+
+        <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+    
+
+    </div>
+
     </div>
  
    </section>
 
    <!-- HOW WE BUILD WITH HYDRA -->
- <section class="relative top-85 max-md:top-100  ">
+ <section class="relative top-85 max-lg:top-105  ">
     <div class="flex font- montserrat min-[835px]:justify-between max-[835px]:justify-center  text-white  ">
         <div>
         <div class="text-wrap max-md:text-center max-[835px]:w-full ">
@@ -530,7 +765,7 @@ libero justo laoreet sit amet vitae.</p>
 
 <!-- HOW WE BUILD HYDRA -->
 
-   <section class="relative top-85 max-md:top-115 ">
+   <section class="relative top-85 max-lg:top-115 max-lg:!hidden" id="howTo">
     
     <div class="flex justify-center items-center">
 
@@ -637,10 +872,137 @@ libero justo laoreet sit amet vitae.</p>
         <img src="images/Vector 15.png" alt="">
     </div>
    </section>
+
+   <!-- HOW WE BUILD HYDRA MOBILE SWIPE -->
+      <section>
+    
+    <div class="swiper-four swiper-four relative top-85 max-lg:top-115 lg:!hidden overflow-x-clip" id="howTo">
+
+            <div class="swiper-wrapper overflow-hidden">
+
+    <div class="swiper-slide bg-[#211E2E] w-[full] h-60 rounded-full">
+         <div class="flex flex-col justify-center items-center py-4">
+        <div class="relative top-5">
+            <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
+            <div class="relative bottom-27 left-7"><h1 class="text-[60px] text-bold text-white font-montserrat">01</h1></div>
+        </div>
+            <div class="w-60">
+       
+        
+         <div class="flex items-center">
+            <div>
+                <img src="images/arrow-small-right.png" alt="">
+            </div>
+            
+            <div>
+                <p class="text-2xl text-white font-montserrat font-bold">
+                3D Conception & Design
+            </p>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div> 
+    
+
+      <div class="swiper-slide bg-[#211E2E] w-[full] h-60 rounded-full max-sm:hidden overflow-hidden">
+         <div class="flex flex-col justify-center items-center py-4">
+        <div class="relative top-5">
+            <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
+            <div class="relative bottom-27 left-7"><h1 class="text-[60px] text-bold text-white font-montserrat">02</h1></div>
+        </div>
+            <div class="w-60">
+        
+        <div class="flex items-center">
+            <div>
+                <img src="images/arrow-small-right.png" alt="">
+            </div>
+            
+            <div>
+                <p class="text-2xl text-white font-montserrat font-bold">
+                Interaction Design
+            </p>
+            </div>
+        </div>
+    </div>
+    </div></div>
+
+      <div class="swiper-slide bg-[#211E2E] w-[full] h-60 rounded-full max-sm:hidden">
+         <div class="flex flex-col justify-center items-center py-4">
+        <div class="relative top-5">
+            <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
+            <div class="relative bottom-27 left-7"><h1 class="text-[60px] text-bold text-white font-montserrat">03</h1></div>
+        </div>
+            <div class="w-60">
+        
+        <div class="flex items-center">
+            <div>
+                <img src="images/arrow-small-right.png" alt="">
+            </div>
+            
+            <div>
+                <p class="text-2xl text-white font-montserrat font-bold">
+                VR World User Testing
+            </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+      <div class="swiper-slide bg-[#211E2E] w-[full] h-60 rounded-full max-sm:hidden">
+         <div class="flex flex-col justify-center items-center py-4">
+        <div class="relative top-5">
+            <div><img class="size-30" src="images/Ellipse 8.png" alt=""></div>
+            <div class="relative bottom-27 left-7"><h1 class="text-[60px] text-bold text-white font-montserrat">04</h1></div>
+        </div>
+            <div class="w-60">
+        
+        <div class="flex items-center">
+            <div>
+                <img src="images/arrow-small-right.png" alt="">
+            </div>
+            
+            <div>
+                <p class="text-2xl text-white font-montserrat font-bold">
+                Hydra VR Deploy
+            </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div> 
+    </div>
+
+      <!-- Navigation buttons -->
+ 
+        <div class="relative w-full flex justify-between bottom-55 z-50">
+
+        <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative">
+    <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+        <div class="my-prev swiper-button-prev !text-[#211E2E] font-bold"></div>
+                
+    </div>
+    </div>
+
+        <div class=" bg-[#211E2E] w-18 h-18 rounded-full relative right-0">
+    <div class="border rounded-full h-12 w-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] absolute left-3 top-3">
+        <div class="my-next swiper-button-next !text-[#211E2E] font-bold"></div>
+                
+    </div>
+    </div>
+    </div> 
+
+        <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+
+    </div>
+
+   </section>
     
      
- <!-- CONTACT US SECTION -->
-<section class="relative top-100 max-md:top-150">
+ <!-- JOIN US SECTION -->
+<section class="relative top-100 max-lg:top-160" id="join">
 
     <div class="relative w-full  border border-[#211E2E] bg-radial from-[#433D60] to-[#211E2E] text-white font-montserrat rounded-[85px] md:h-213 h-200">
 
@@ -679,7 +1041,8 @@ libero justo laoreet sit amet vitae.</p>
                 </div>
 
                 <div class=" flex justify-center">
-                    <button class="border text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF]">SEND TO HYDRA</button>
+                        <button class="border text-white rounded-4xl text-sm m-0.5 w-38.5 h-10 md:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF]">SEND TO HYDRA</button>
+                    
                 </div>
 
             </form>
@@ -706,11 +1069,11 @@ libero justo laoreet sit amet vitae.</p>
     </div>
 
     <div class="flex flex-col max-md:hidden">
-        <a href="">ABOUT</a>
-        <a href="">SERVICES</a>
-        <a href="">TECHNOLOGIES</a>
-        <a href="">HOW TO</a>
-        <a href="">JOIN HYDRA</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#technologies">TECHNOLOGIES</a>
+        <a href="#howTo">HOW TO</a>
+        <a href="#join">JOIN HYDRA</a>
 
     </div>
 
@@ -734,12 +1097,19 @@ libero justo laoreet sit amet vitae.</p>
         <div><h2>SOCIALIZE WITH HYDRA</h2></div>
         
         <div class="flex flex-wrap gap-6">
-            <img src="images/facebook.png" alt="">
-            <img src="images/twitter.png" alt="">
-            <img src="images/linkedin.png" alt="">
-            <img src="images/youtube.png" alt="">
-            <img src="images/instagram.png" alt="">
-            <img src="images/pinterest.png" alt="">
+
+            <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.pinterest.com" target="_blank"><img src="images/pinterest.png" alt="pinterest"></a>
+          
+           
+            
+            
+            
+            
         </div>
 
         <div><button class="border text-white rounded-4xl text-sm m-0.5 w-48.5 h-10 md:h-12 bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] border-[#8176AF] max-md:w-full">BUILDING YOUR WORLD</button></div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send me a message</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet"> <!-- Lucide Icons -->
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-indigo-100 to-violet-100 min-h-screen flex items-center justify-center font-sans relative overflow-hidden">
+
+  <!-- Background glowing accents -->
+  <div class="absolute top-10 left-10 w-60 h-60 bg-purple-300/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-16 right-16 w-72 h-72 bg-indigo-300/20 rounded-full blur-3xl"></div>
+
+  <main class="bg-white/70 backdrop-blur-xl shadow-2xl rounded-3xl p-10 md:p-14 max-w-lg w-full border border-slate-200 relative z-10">
+    
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">💬 Send me a Feedback</h1>
+      <p class="text-slate-500 mt-3 text-base">Your words mean a lot — share your experience with me</p>
+    </div>
+
+    <!-- Options -->
+    <div class="space-y-7">
+
+      <!-- WhatsApp -->
+      <div class="group flex items-center gap-5 p-6 rounded-2xl bg-gradient-to-r from-white to-slate-50 border border-slate-200 shadow-md hover:shadow-2xl transition transform hover:scale-[1.02] hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50">
+        
+        <!-- Icon -->
+        <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-green-400 to-green-600 text-white shadow-lg group-hover:scale-110 transition">
+          <img src="images/icons8-whatsapp.svg" alt="">
+        </div>
+
+        <!-- Text -->
+        <div>
+          <h2 class="text-lg font-semibold text-slate-800">Option 1: WhatsApp</h2>
+          <a href="https://wa.me/237680356247?text=Hello Micheal Glenn%20I%20want%20to%20contact%20you" target="_blank"
+            class="mt-1 inline-block text-green-600 font-medium hover:underline">
+            Chat with me on WhatsApp →
+          </a>
+        </div>
+      </div>
+
+      <!-- Gmail -->
+      <div class="group flex items-center gap-5 p-6 rounded-2xl bg-gradient-to-r from-white to-slate-50 border border-slate-200 shadow-md hover:shadow-2xl transition transform hover:scale-[1.02] hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50">
+        
+        <!-- Icon -->
+        <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-red-500 to-orange-500 text-white shadow-lg group-hover:scale-110 transition">
+          <img src="images/gmail-svgrepo-com.svg" alt="">
+        </div>
+        
+
+        <!-- Text -->
+        <div>
+          <h2 class="text-lg font-semibold text-slate-800">Option 2: Gmail</h2>
+          <a href="mailto:tohmichael62@gmail.com?subject=Hello&body=Hi%20there,%20I%20want%20to%20contact%20you."
+            class="mt-1 inline-block text-red-500 font-medium hover:underline">
+            Send me an Email →
+          </a>
+        </div>
+      </div>
+
+      <!-- SMS -->
+      <div class="group flex items-center gap-5 p-6 rounded-2xl bg-gradient-to-r from-white to-slate-50 border border-slate-200 shadow-md hover:shadow-2xl transition transform hover:scale-[1.02] hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50">
+        
+        <!-- Icon -->
+        <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-lg group-hover:scale-110 transition">
+          <img src="images/email-part-2-svgrepo-com.svg" alt="">
+        </div>
+
+        <!-- Text -->
+        <div>
+          <h2 class="text-lg font-semibold text-slate-800">Option 3: SMS</h2>
+          <a href="sms:+237680356247?&body=Hello%20I%20want%20to%20contact%20you"
+            class="mt-1 inline-block text-blue-600 font-medium hover:underline">
+            Send me an SMS →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
+
+
+
